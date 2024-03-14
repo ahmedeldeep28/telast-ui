@@ -1,6 +1,8 @@
 import React, { useState } from "react";
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta } from "@storybook/react";
 import { Calendar } from ".";
+import { addDays } from "date-fns";
+import { DateRange } from "react-day-picker";
 
 const meta: Meta<typeof Calendar> = {
   title: "Component/Calendar",
@@ -13,11 +15,9 @@ const meta: Meta<typeof Calendar> = {
 
 export default meta;
 
-type Story = StoryObj<typeof meta>;
-
-export const Default: Story = {
+export const Default = {
   render: () => {
-    const [date, setDate] = useState(new Date());
+    const [date, setDate] = useState<Date | undefined>(new Date());
     return (
       <Calendar
         mode="single"
@@ -29,19 +29,21 @@ export const Default: Story = {
   },
 };
 
-export const DateRange: Story = {
+export const WithDateRange = {
   render: () => {
-    const [date, setDate] = useState({
-      from: new Date(),
-      to: new Date(),
+
+    const [date, setDate] = useState<DateRange | undefined>({
+      from: new Date(2022, 0, 20),
+      to: addDays(new Date(2022, 0, 20), 20),
     });
+
     return (
       <Calendar
         initialFocus
         mode="range"
+        defaultMonth={date?.from}
         selected={date}
-        onSelect={(date) => setDate(date)}
-        className="rounded-md border"
+        onSelect={setDate}
         numberOfMonths={2}
       />
     );
