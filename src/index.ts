@@ -1,4 +1,4 @@
-export { toast, type ExternalToast, type ToastT } from "sonner";
+export { toast } from "sonner";
 export * from "./components/alert";
 export * from "./components/aspect-ratio";
 export * from "./components/badge";
