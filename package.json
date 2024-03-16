@@ -1,9 +1,9 @@
 {
-  "name": "deep-ui",
+  "name": "deep-ui-react",
   "description": "deep-ui is a UI library for React that helps you build beautiful and accessible user interfaces. Created on top of Tailwind CSS and radix-ui.",
   "license": "MIT",
   "version": "0.0.1",
-  "private": true,
+  "private": false,
   "author": {
     "name": "Ahmed Eldeep",
     "email": "eldeep.email@gmail.com"
