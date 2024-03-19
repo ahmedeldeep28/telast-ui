@@ -7,8 +7,6 @@ import { DialogOverlay } from "./dialog-overlay";
 import { cva } from "class-variance-authority";
 import { RoundedType, SizeType } from "@/lib/type";
 
-const DialogPortal = DialogPrimitive.Portal;
-
 const dialogContentStyles = cva(
   [
     "border bg-background shadow-lg duration-200 z-50 w-full",
@@ -50,7 +48,7 @@ const DialogContent = React.forwardRef<
   React.ElementRef<typeof DialogPrimitive.Content>,
   DialogContentProps
 >(({ className, children, size, rounded, ...props }, ref) => (
-  <DialogPortal>
+  <DialogPrimitive.Portal>
     <DialogOverlay />
     <DialogPrimitive.Content
       ref={ref}
@@ -63,7 +61,7 @@ const DialogContent = React.forwardRef<
         <span className="sr-only">Close</span>
       </DialogPrimitive.Close>
     </DialogPrimitive.Content>
-  </DialogPortal>
+  </DialogPrimitive.Portal>
 ));
 DialogContent.displayName = DialogPrimitive.Content.displayName;
 
