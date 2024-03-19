@@ -14,5 +14,25 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
-  args: {},
+  args: {
+    color: "primary",
+  },
+};
+
+export const Disabled: Story = {
+  args: {
+    disabled: true,
+  },
+};
+
+export const Checked: Story = {
+  args: {
+    checked: true,
+  },
+};
+
+export const DefaultChecked: Story = {
+  args: {
+    defaultChecked: true,
+  },
 };
