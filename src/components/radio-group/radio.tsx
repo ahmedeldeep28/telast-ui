@@ -62,7 +62,7 @@ const Radio = React.forwardRef<
     ...restProps
   } = props;
   return (
-    <div className={cn("flex items-center space-x-1.5", classNames.wrapper)}>
+    <div className={cn("flex items-center space-x-2", classNames.wrapper)}>
       <RadioGroupPrimitive.Item
         ref={ref}
         value={value}
