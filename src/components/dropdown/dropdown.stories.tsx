@@ -4,6 +4,7 @@ import {
   Dropdown,
   DropdownCheckboxItem,
   DropdownContent,
+  DropdownDivider,
   DropdownItem,
   DropdownLabel,
   DropdownRadioGroup,
@@ -14,7 +15,6 @@ import {
   DropdownTrigger,
 } from ".";
 import { Button } from "../button";
-import { Divider } from "../divider";
 
 const meta: Meta<typeof Dropdown> = {
   title: "Component/Dropdown",
@@ -38,32 +38,12 @@ export const Default: Story = {
         </DropdownTrigger>
         <DropdownContent>
           <DropdownLabel>My Account</DropdownLabel>
-          <Divider className="my-1" />
+          <DropdownDivider className="my-1" />
           <DropdownItem>Profile</DropdownItem>
           <DropdownItem>Billing</DropdownItem>
           <DropdownItem>Settings</DropdownItem>
           <DropdownItem>Team</DropdownItem>
           <DropdownItem>Invite users</DropdownItem>
-        </DropdownContent>
-      </Dropdown>
-    );
-  },
-};
-
-export const DefaultOpen: Story = {
-  render: () => {
-    return (
-      <Dropdown defaultOpen={true}>
-        <DropdownTrigger asChild>
-          <Button variant="outline">Open</Button>
-        </DropdownTrigger>
-        <DropdownContent>
-          <DropdownLabel>My Account</DropdownLabel>
-          <Divider className="my-1" />
-          <DropdownItem>Profile</DropdownItem>
-          <DropdownItem>Billing</DropdownItem>
-          <DropdownItem>Settings</DropdownItem>
-          <DropdownItem>Team</DropdownItem>
         </DropdownContent>
       </Dropdown>
     );
@@ -82,7 +62,7 @@ export const Checkboxes: StoryObj<typeof DropdownContent> = {
         </DropdownTrigger>
         <DropdownContent {...args}>
           <DropdownLabel>Appearance</DropdownLabel>
-          <Divider className="my-1" />
+          <DropdownDivider className="my-1" />
           <DropdownCheckboxItem
             checked={showStatusBar}
             onCheckedChange={setShowStatusBar}
@@ -117,7 +97,7 @@ export const Radios: StoryObj<typeof DropdownContent> = {
         </DropdownTrigger>
         <DropdownContent {...args}>
           <DropdownLabel>Appearance</DropdownLabel>
-          <Divider className="my-1" />
+          <DropdownDivider className="my-1" />
           <DropdownRadioGroup value={position} onValueChange={setPosition}>
             <DropdownRadioItem value="top">Top</DropdownRadioItem>
             <DropdownRadioItem value="bottom">Bottom</DropdownRadioItem>
