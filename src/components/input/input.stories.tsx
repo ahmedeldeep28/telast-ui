@@ -20,6 +20,20 @@ export const Default: Story = {
   },
 };
 
+export const WithInputType: Story = {
+  argTypes: {
+    type: {
+      control: {
+        type: "select",
+      },
+      options: ["file", "number", "date", "password"],
+    },
+  },
+  args: {
+    type: "file",
+  },
+};
+
 export const Placeholder: Story = {
   args: {
     placeholder: "Placeholder input",
