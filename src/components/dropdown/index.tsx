@@ -6,6 +6,7 @@ export const DropdownGroup = DropdownPrimitive.Group;
 export const DropdownPortal = DropdownPrimitive.Portal;
 export const DropdownSub = DropdownPrimitive.Sub;
 export const DropdownRadioGroup = DropdownPrimitive.RadioGroup;
+export { DropdownDivider } from "./dropdown-divider";
 export { DropdownLabel } from "./dropdown-label";
 
 export {
