@@ -16,12 +16,12 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
-  
   render: (args) => {
     return (
       <RadioGroup {...args}>
-        <Radio value="option-one">option one</Radio>
-        <Radio value="option-two">option two</Radio>
+        <Radio value="default">default</Radio>
+        <Radio value="comfortable">comfortable</Radio>
+        <Radio value="compact">compact</Radio>
       </RadioGroup>
     );
   },
@@ -34,8 +34,9 @@ export const WithAdvanced: Story = {
   render: (args) => {
     return (
       <RadioGroup {...args}>
-        <AdvancedRadio value="option-one">option one</AdvancedRadio>
-        <AdvancedRadio value="option-two">option two</AdvancedRadio>
+        <AdvancedRadio value="card">card</AdvancedRadio>
+        <AdvancedRadio value="paypal">paypal</AdvancedRadio>
+        <AdvancedRadio value="apple">apple</AdvancedRadio>
       </RadioGroup>
     );
   },
