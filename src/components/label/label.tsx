@@ -5,11 +5,11 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const labelStyles = cva(
-  "font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70",
+  "font-medium leading-none capitalize peer-disabled:cursor-not-allowed peer-disabled:opacity-70",
   {
     variants: {
       size: {
-        sm: "text-xs ",
+        sm: "text-xs",
         md: "text-sm",
         lg: "text-base",
       },
