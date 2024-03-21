@@ -22,7 +22,7 @@ export default defineConfig({
   build: {
     lib: {
       entry: resolve(__dirname, "src/index.ts"),
-      name:"deep-ui",
+      name:"deep-ui-react",
       formats: ["es", "cjs"],
       fileName: (ext) => `index.${ext}.js`,
     },
