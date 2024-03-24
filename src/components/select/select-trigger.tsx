@@ -10,22 +10,23 @@ const selectTriggerStyles = cva(
     "border border-input bg-background placeholder:text-muted-foreground",
     "h-10 w-full flex items-center justify-between",
     "ring-offset-background [&>span]:line-clamp-1",
-    "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
+    "focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring",
     "disabled:cursor-not-allowed disabled:opacity-50",
   ],
   {
     variants: {
       color: {
-        primary: "border-primary focus-visible:ring-primary",
-        secondary: "border-secondary focus-visible:ring-secondary",
-        success: "border-success focus-visible:ring-success",
-        danger: "border-danger focus-visible:ring-danger",
-        warning: "border-warning focus-visible:ring-warning",
+        primary: "focus-visible:border-primary focus-visible:ring-primary",
+        secondary:
+          "focus-visible:border-secondary focus-visible:ring-secondary",
+        success: "focus-visible:border-success focus-visible:ring-success",
+        danger: "focus-visible:border-danger focus-visible:ring-danger",
+        warning: "focus-visible:border-warning focus-visible:ring-warning",
       },
       size: {
-        sm: "h-8 px-2 py-1 text-xs",
+        sm: "h-9 px-2 py-1 text-xs",
         md: "h-10 px-3 py-2 text-sm",
-        lg: "h-12 px-3.5 py-2 text-base",
+        lg: "h-11 px-3.5 py-2 text-base",
       },
       rounded: {
         none: "rounded-none",
@@ -35,7 +36,7 @@ const selectTriggerStyles = cva(
         full: "rounded-full",
       },
       isInvalid: {
-        true: "border-danger focus-visible:ring-danger",
+        true: "border-danger focus-visible:border-danger focus-visible:ring-danger",
       },
     },
     defaultVariants: {
