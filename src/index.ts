@@ -24,4 +24,5 @@ export * from "./components/switch";
 export * from "./components/table";
 export * from "./components/tabs";
 export * from "./components/tooltip";
+export * from "./components/avatar";
 export * from "./lib/themes-preset";
