@@ -7,8 +7,8 @@ import { ColorType, RoundedType } from "@/lib/type";
 
 const advancedRadioStyles = cva(
   [
-    "px-3 py-2 w-fit h-fit border shadow-sm transition-all",
-    "focus:ring-2 data-[state=checked]:ring-1",
+    "px-3 py-2 w-fit h-fit border border-border shadow-sm transition-all",
+    "data-[state=checked]:ring-1",
     "disabled:cursor-not-allowed disabled:opacity-50",
   ],
   {
