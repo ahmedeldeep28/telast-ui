@@ -9,18 +9,23 @@ import { ColorType, SizeType } from "@/lib/type";
 
 const radioStyles = cva(
   [
-    "rounded-full p-0.5 border aspect-square transition-all",
-    "ring-offset-background focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
+    "rounded-full p-0.5 border border-input aspect-square",
+    "focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
     "disabled:cursor-not-allowed disabled:opacity-50",
   ],
   {
     variants: {
       color: {
-        primary: "text-primary border-primary",
-        secondary: "text-secondary border-secondary",
-        danger: "text-danger border-danger",
-        warning: "text-warning border-warning",
-        success: "text-success border-success",
+        primary:
+          "text-primary data-[state=checked]:border-primary",
+        secondary:
+          "text-secondary data-[state=checked]:border-secondary",
+        danger:
+          "text-danger data-[state=checked]:border-danger",
+        warning:
+          "text-warning data-[state=checked]:border-warning",
+        success:
+          "text-success data-[state=checked]:border-success",
       },
       size: {
         sm: "size-3.5",
@@ -70,7 +75,7 @@ const Radio = React.forwardRef<
         className={cn(radioStyles({ color, size }), className, classNames.base)}
         {...restProps}
       >
-        <RadioGroupPrimitive.Indicator className="flex items-center justify-center">
+        <RadioGroupPrimitive.Indicator>
           <Circle className="size-full fill-current text-current" />
         </RadioGroupPrimitive.Indicator>
       </RadioGroupPrimitive.Item>
