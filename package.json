@@ -1,9 +1,13 @@
 {
   "name": "deep-ui-react",
   "description": "deep-ui-react is a UI library for React that helps you build beautiful and accessible user interfaces. Created on top of Tailwind CSS and radix-ui.",
-  "license": "MIT",
-  "version": "0.0.3",
-  "private": false,
+  "keywords": [
+    "react",
+    "components",
+    "ui components",
+    "tailwind-css",
+    "component-library"
+  ],
   "homepage": "https://deep-ui-one.vercel.app/",
   "author": {
     "name": "Ahmed Eldeep",
@@ -13,6 +17,9 @@
     "type": "git",
     "url": "https://github.com/ahmedeldeep28/deep-ui"
   },
+  "version": "0.0.3",
+  "private": false,
+  "license": "MIT",
   "type": "module",
   "main": "dist/index.cjs.js",
   "module": "dist/index.es.js",
