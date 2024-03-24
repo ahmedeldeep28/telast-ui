@@ -9,23 +9,23 @@ import { ColorType, SizeType } from "@/lib/type";
 
 const checkboxStyles = cva(
   [
-    "peer rounded-sm border shadow shrink-0",
-    "focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring",
+    "peer rounded-sm border border-input shadow shrink-0",
+    "ring-offset-background focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
     "disabled:cursor-not-allowed disabled:opacity-50",
   ],
   {
     variants: {
       color: {
         primary:
-          "data-[state=checked]:bg-primary text-primary-foreground border-primary",
+          "text-primary-foreground data-[state=checked]:border-primary data-[state=checked]:bg-primary",
         secondary:
-          "data-[state=checked]:bg-secondary text-secondary-foreground border-secondary",
+          "text-secondary-foreground data-[state=checked]:border-secondary data-[state=checked]:bg-secondary ",
         danger:
-          "data-[state=checked]:bg-danger text-danger-foreground border-danger",
+          "text-danger-foreground data-[state=checked]:border-danger data-[state=checked]:bg-danger ",
         warning:
-          "data-[state=checked]:bg-warning text-warning-foreground border-warning",
+          "text-warning-foreground data-[state=checked]:border-warning data-[state=checked]:bg-warning ",
         success:
-          "data-[state=checked]:bg-success text-success-foreground border-success",
+          "data-[state=checked]:border-success data-[state=checked]:bg-success text-success-foreground ",
       },
       size: {
         sm: "size-3.5",
@@ -67,7 +67,7 @@ const Checkbox = React.forwardRef<
     ...restProps
   } = props;
   return (
-    <div className={cn("flex items-center space-x-1.5", classNames.wrapper)}>
+    <div className={cn("flex items-center space-x-2", classNames.wrapper)}>
       <CheckboxPrimitive.Root
         ref={ref}
         id={id}
