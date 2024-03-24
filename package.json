@@ -4,6 +4,7 @@
   "license": "MIT",
   "version": "0.0.3",
   "private": false,
+  "homepage": "https://deep-ui-one.vercel.app/",
   "author": {
     "name": "Ahmed Eldeep",
     "email": "eldeep.email@gmail.com"
