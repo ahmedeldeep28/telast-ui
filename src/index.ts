@@ -7,6 +7,7 @@ export * from "./components/calendar";
 export * from "./components/card";
 export * from "./components/collapsible";
 export * from "./components/dialog";
+export * from "./components/drawer";
 export * from "./components/divider";
 export * from "./components/dropdown";
 export * from "./components/hover-card";
