@@ -1,6 +1,6 @@
 import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
-import { AdvancedCheckbox, Checkbox, CheckboxGroup } from ".";
+import { CheckboxCard, Checkbox, CheckboxGroup } from ".";
 
 const meta: Meta<typeof Checkbox> = {
   title: "Component/Checkbox",
@@ -28,19 +28,19 @@ export const WithOutLabel: Story = {
   },
 };
 
-export const WithAdvanced: Story = {
+export const WithCheckboxCard: Story = {
   render: (args) => {
     return (
       <CheckboxGroup orientation="horizontal">
-        <AdvancedCheckbox value="card" {...args}>
+        <CheckboxCard value="card" {...args}>
           card
-        </AdvancedCheckbox>
-        <AdvancedCheckbox value="paypal" {...args}>
+        </CheckboxCard>
+        <CheckboxCard value="paypal" {...args}>
           paypal
-        </AdvancedCheckbox>
-        <AdvancedCheckbox value="apple" {...args}>
+        </CheckboxCard>
+        <CheckboxCard value="apple" {...args}>
           apple
-        </AdvancedCheckbox>
+        </CheckboxCard>
       </CheckboxGroup>
     );
   },

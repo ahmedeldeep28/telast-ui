@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 import { cva } from "class-variance-authority";
 import { ColorType, RoundedType } from "@/lib/type";
 
-const advancedCheckboxStyles = cva(
+const checkboxCardStyles = cva(
   [
     "px-3 py-2 w-fit h-fit border shadow-sm transition-all",
     "data-[state=checked]:ring-1",
@@ -47,7 +47,7 @@ interface CheckboxProps
   className?: string;
 }
 
-const AdvancedCheckbox = React.forwardRef<
+const CheckboxCard = React.forwardRef<
   React.ElementRef<typeof CheckboxPrimitive.Root>,
   CheckboxProps
 >((props, ref) => {
@@ -55,13 +55,13 @@ const AdvancedCheckbox = React.forwardRef<
   return (
     <CheckboxPrimitive.Root
       ref={ref}
-      className={cn(advancedCheckboxStyles({ color, rounded }), className)}
+      className={cn(checkboxCardStyles({ color, rounded }), className)}
       {...restProps}
     >
       {children}
     </CheckboxPrimitive.Root>
   );
 });
-AdvancedCheckbox.displayName = CheckboxPrimitive.Root.displayName;
+CheckboxCard.displayName = CheckboxPrimitive.Root.displayName;
 
-export { AdvancedCheckbox, advancedCheckboxStyles };
+export { CheckboxCard, checkboxCardStyles };

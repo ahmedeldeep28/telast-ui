@@ -1,3 +1,3 @@
 export { Checkbox, checkboxStyles } from "./checkbox";
-export { AdvancedCheckbox, advancedCheckboxStyles } from "./advanced-checkbox";
+export { CheckboxCard, checkboxCardStyles } from "./checkbox-card";
 export { CheckboxGroup } from "./checkbox-group";
