@@ -4,6 +4,7 @@ import { ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { cva } from "class-variance-authority";
 import { ColorType, RoundedType, SizeType } from "@/lib/type";
+import { SelectValue } from ".";
 
 const selectTriggerStyles = cva(
   [
@@ -53,26 +54,39 @@ export interface SelectTriggerProps
   color?: ColorType;
   size?: SizeType;
   rounded?: RoundedType;
+  placeholder?: string;
 }
 
 const SelectTrigger = React.forwardRef<
   React.ElementRef<typeof SelectPrimitive.Trigger>,
   SelectTriggerProps
->(({ className, color, size, rounded, isInvalid, children, ...props }, ref) => (
-  <SelectPrimitive.Trigger
-    ref={ref}
-    className={cn(
-      selectTriggerStyles({ color, size, rounded, isInvalid }),
-      className
-    )}
-    {...props}
-  >
-    {children}
-    <SelectPrimitive.Icon asChild>
-      <ChevronDown className="h-4 w-4 opacity-50" />
-    </SelectPrimitive.Icon>
-  </SelectPrimitive.Trigger>
-));
+>((props, ref) => {
+  const {
+    className,
+    color,
+    size,
+    rounded,
+    isInvalid,
+    placeholder,
+    children,
+    ...resetProps
+  } = props;
+  return (
+    <SelectPrimitive.Trigger
+      ref={ref}
+      className={cn(
+        selectTriggerStyles({ color, size, rounded, isInvalid }),
+        className
+      )}
+      {...resetProps}
+    >
+      {children ? children : <SelectValue placeholder={placeholder} />}
+      <SelectPrimitive.Icon asChild>
+        <ChevronDown className="h-4 w-4 opacity-50" />
+      </SelectPrimitive.Icon>
+    </SelectPrimitive.Trigger>
+  );
+});
 
 SelectTrigger.displayName = SelectPrimitive.Trigger.displayName;
 
