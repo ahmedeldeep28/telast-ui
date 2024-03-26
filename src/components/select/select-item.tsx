@@ -5,7 +5,7 @@ import { Check } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { cva } from "class-variance-authority";
 
-const selectItemStyle = cva([
+const selectItemStyles = cva([
   "relative flex w-full cursor-default select-none items-center",
   "rounded-sm py-1.5 ps-2 pe-2 text-sm outline-none",
   "focus:bg-accent focus:text-accent-foreground",
@@ -18,7 +18,7 @@ const SelectItem = React.forwardRef<
 >(({ className, children, ...props }, ref) => (
   <SelectPrimitive.Item
     ref={ref}
-    className={cn(selectItemStyle(), className)}
+    className={cn(selectItemStyles(), className)}
     {...props}
   >
     <span className="absolute end-2 flex h-3.5 w-3.5 items-center justify-center">
@@ -32,4 +32,4 @@ const SelectItem = React.forwardRef<
 ));
 SelectItem.displayName = SelectPrimitive.Item.displayName;
 
-export { SelectItem, selectItemStyle };
+export { SelectItem, selectItemStyles };
