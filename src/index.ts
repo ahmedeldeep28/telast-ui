@@ -27,3 +27,4 @@ export * from "./components/tabs";
 export * from "./components/tooltip";
 export * from "./components/avatar";
 export * from "./lib/themes-preset";
+export * from "./lib/utils";
