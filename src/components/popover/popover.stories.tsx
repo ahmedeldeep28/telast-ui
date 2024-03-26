@@ -1,7 +1,7 @@
 import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
 import { Popover, PopoverContent, PopoverTrigger } from ".";
-import Avatar from "../avatar";
+import { Avatar } from "../avatar";
 import { Label } from "../label";
 import { Input } from "../input";
 
