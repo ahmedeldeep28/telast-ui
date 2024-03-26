@@ -1,7 +1,7 @@
+import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
 import { User } from "lucide-react";
 import { Avatar } from "./avatar";
-import React from "react";
 
 const meta: Meta<typeof Avatar> = {
   title: "Component/Avatar",

@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 import { cva } from "class-variance-authority";
 import { ColorType, RoundedType, SizeType } from "@/lib/type";
 
-const AvatarStyles = cva(
+const avatarStyles = cva(
   "relative inline-flex shrink-0 overflow-hidden bg-muted",
   {
     variants: {
@@ -67,7 +67,7 @@ const Avatar = React.forwardRef<React.ElementRef<typeof Root>, AvatarProps>(
     return (
       <Root
         ref={ref}
-        className={cn(AvatarStyles({ size, rounded, color }), className)}
+        className={cn(avatarStyles({ size, rounded, color }), className)}
         {...restProps}
       >
         <Image className={cn("size-full")} src={src} alt={alt} />
@@ -83,7 +83,6 @@ const Avatar = React.forwardRef<React.ElementRef<typeof Root>, AvatarProps>(
     );
   }
 );
-
 Avatar.displayName = Root.displayName;
 
-export { Avatar, AvatarStyles };
+export { Avatar, avatarStyles };
