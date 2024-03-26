@@ -17,7 +17,7 @@
     "type": "git",
     "url": "https://github.com/ahmedeldeep28/deep-ui"
   },
-  "version": "0.0.5",
+  "version": "0.0.8",
   "private": false,
   "license": "MIT",
   "type": "module",
@@ -68,6 +68,7 @@
     "react": "^18.2.0",
     "react-day-picker": "^8.10.0",
     "react-dom": "^18.2.0",
+    "react-select": "^5.8.0",
     "rimraf": "^3.0.2",
     "sonner": "^1.4.3",
     "tailwind-merge": "^2.2.1",
