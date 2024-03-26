@@ -1,6 +1,6 @@
 import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
-import { RadioGroup, Radio, AdvancedRadio } from ".";
+import { RadioGroup, Radio, RadioCard } from ".";
 
 const meta: Meta<typeof RadioGroup> = {
   title: "Component/RadioGroup",
@@ -27,16 +27,16 @@ export const Default: Story = {
   },
 };
 
-export const WithAdvanced: Story = {
+export const WithRadioCard: Story = {
   args: {
     orientation: "horizontal",
   },
   render: (args) => {
     return (
       <RadioGroup {...args}>
-        <AdvancedRadio value="card">card</AdvancedRadio>
-        <AdvancedRadio value="paypal">paypal</AdvancedRadio>
-        <AdvancedRadio value="apple">apple</AdvancedRadio>
+        <RadioCard value="card">card</RadioCard>
+        <RadioCard value="paypal">paypal</RadioCard>
+        <RadioCard value="apple">apple</RadioCard>
       </RadioGroup>
     );
   },

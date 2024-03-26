@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 import { cva } from "class-variance-authority";
 import { ColorType, RoundedType } from "@/lib/type";
 
-const advancedRadioStyles = cva(
+const radioCardStyles = cva(
   [
     "px-3 py-2 w-fit h-fit border border-border shadow-sm transition-all",
     "data-[state=checked]:ring-1",
@@ -48,7 +48,7 @@ interface RadioProps
   className?: string;
 }
 
-const AdvancedRadio = React.forwardRef<
+const RadioCard = React.forwardRef<
   React.ElementRef<typeof RadioGroupPrimitive.Item>,
   RadioProps
 >((props, ref) => {
@@ -57,13 +57,13 @@ const AdvancedRadio = React.forwardRef<
     <RadioGroupPrimitive.Item
       ref={ref}
       value={value}
-      className={cn(advancedRadioStyles({ color, rounded }), className)}
+      className={cn(radioCardStyles({ color, rounded }), className)}
       {...restProps}
     >
       {children}
     </RadioGroupPrimitive.Item>
   );
 });
-AdvancedRadio.displayName = RadioGroupPrimitive.Item.displayName;
+RadioCard.displayName = RadioGroupPrimitive.Item.displayName;
 
-export { AdvancedRadio, advancedRadioStyles };
+export { RadioCard, radioCardStyles };
