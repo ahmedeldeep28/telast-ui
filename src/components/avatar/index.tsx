@@ -1,2 +1,1 @@
-export { AvatarStyles } from "./avatar";
-export { Avatar } from "./avatar";
+export { Avatar, avatarStyles } from "./avatar";
