@@ -1,4 +1,1 @@
-import { Progress } from "./progress";
-export { progressIndicatorStyles } from "./progress";
-
-export default Progress;
+export { Progress, progressIndicatorStyles } from "./progress";
