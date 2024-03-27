@@ -23,7 +23,7 @@ export const comboboxOptionStyle = cva(
 export const comboboxControlStyle = cva(
   [
     "border border-input bg-background",
-    "h-10 w-full flex items-center justify-between",
+    "w-full flex items-center justify-between",
     "ring-offset-background",
   ],
   {
@@ -36,9 +36,9 @@ export const comboboxControlStyle = cva(
         warning: "",
       },
       size: {
-        sm: "h-9 px-2 py-1 text-xs",
-        md: "h-10 px-3 py-2 text-sm",
-        lg: "h-11 px-3.5 py-2 text-base",
+        sm: "min-h-9 px-2 py-1 text-xs",
+        md: "min-h-10 px-3 py-2 text-sm",
+        lg: "min-h-11 px-3.5 py-2 text-base",
       },
       rounded: {
         none: "rounded-none",
