@@ -50,6 +50,7 @@ const Combobox = React.forwardRef<
           "h-6 flex items-center bg-primary/10 text-primary rounded-sm",
         multiValueRemove: () => "p-1 hover:bg-danger/20 hover:text-danger",
         multiValueLabel: () => "px-1.5 text-sm",
+        clearIndicator: () => "hover:text-danger cursor-pointer w-4",
       }}
       unstyled
       ref={ref}
