@@ -9,7 +9,7 @@ import { SelectValue } from ".";
 const selectTriggerStyles = cva(
   [
     "border border-input bg-background placeholder:text-muted-foreground",
-    "h-10 w-full flex items-center justify-between",
+    "w-full flex items-center justify-between",
     "ring-offset-background [&>span]:line-clamp-1",
     "focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring",
     "disabled:cursor-not-allowed disabled:opacity-50",
