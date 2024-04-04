@@ -7,11 +7,11 @@ export const BUTTON_SOLID = {
 };
 
 export const BUTTON_SOFT = {
-  primary: "bg-primary/20 text-primary hover:bg-primary/30",
-  secondary: "bg-secondary/20 text-secondary hover:bg-secondary/30",
-  warning: "bg-warning/20 text-warning hover:bg-warning/30",
-  success: "bg-success/20 text-success hover:bg-success/30",
-  danger: "bg-danger/20 text-danger hover:bg-danger/30",
+  primary: "bg-primary/10 text-primary hover:bg-primary/20",
+  secondary: "bg-secondary/10 text-secondary hover:bg-secondary/20",
+  warning: "bg-warning/10 text-warning hover:bg-warning/20",
+  success: "bg-success/10 text-success hover:bg-success/20",
+  danger: "bg-danger/10 text-danger hover:bg-danger/20",
 };
 
 export const BUTTON_OUTLINE = {
@@ -22,3 +22,10 @@ export const BUTTON_OUTLINE = {
   danger: "text-danger border-danger hover:bg-danger/5",
 };
 
+export const BUTTON_TEXT = {
+  primary: "text-primary hover:bg-primary/20",
+  secondary: "text-secondary hover:bg-secondary/20",
+  warning: "text-warning hover:bg-warning/20",
+  success: "text-success hover:bg-success/20",
+  danger: "text-danger hover:bg-danger/20",
+};

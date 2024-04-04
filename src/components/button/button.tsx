@@ -4,7 +4,12 @@ import { cva, type VariantProps } from "class-variance-authority";
 
 import { cn } from "@/lib/utils";
 import { Loader2 } from "lucide-react";
-import { BUTTON_OUTLINE, BUTTON_SOFT, BUTTON_SOLID } from "./button-variants";
+import {
+  BUTTON_OUTLINE,
+  BUTTON_SOFT,
+  BUTTON_SOLID,
+  BUTTON_TEXT,
+} from "./button-variants";
 import { ColorType, RoundedType, SizeType, VariantType } from "@/lib/type";
 
 const buttonVariants = cva(
@@ -22,6 +27,7 @@ const buttonVariants = cva(
         solid: "",
         soft: "",
         outline: "border",
+        text: "",
       },
       color: {
         primary: "",
@@ -31,9 +37,9 @@ const buttonVariants = cva(
         danger: "",
       },
       size: {
-        sm: "h-9 px-3 gap-1.5",
-        md: "h-10 px-4 gap-2",
-        lg: "h-11 px-8 gap-4",
+        sm: "h-8 px-3 gap-1.5",
+        md: "h-9 px-4 gap-2",
+        lg: "h-11 px-6 gap-4",
       },
       rounded: {
         sm: "rounded-sm",
@@ -53,8 +59,8 @@ const buttonVariants = cva(
     },
     compoundVariants: [
       // compound isIcon and size
-      { isIconOnly: true, size: "sm", class: "size-9" },
-      { isIconOnly: true, size: "md", class: "size-10" },
+      { isIconOnly: true, size: "sm", class: "size-8" },
+      { isIconOnly: true, size: "md", class: "size-9" },
       { isIconOnly: true, size: "lg", class: "size-11" },
 
       // compound variant and color
@@ -77,6 +83,15 @@ const buttonVariants = cva(
       { variant: "outline", color: "warning", class: BUTTON_OUTLINE.warning },
       { variant: "outline", color: "success", class: BUTTON_OUTLINE.success },
       { variant: "outline", color: "danger", class: BUTTON_OUTLINE.danger },
+      { variant: "text", color: "primary", class: BUTTON_OUTLINE.primary },
+      {
+        variant: "text",
+        color: "secondary",
+        class: BUTTON_TEXT.secondary,
+      },
+      { variant: "text", color: "warning", class: BUTTON_TEXT.warning },
+      { variant: "text", color: "success", class: BUTTON_TEXT.success },
+      { variant: "text", color: "danger", class: BUTTON_TEXT.danger },
     ],
   }
 );
@@ -87,7 +102,7 @@ export interface ButtonProps
   asChild?: boolean;
   isIconOnly?: boolean;
   isLoading?: boolean;
-  variant?: VariantType;
+  variant?: VariantType | "text";
   color?: ColorType;
   size?: SizeType;
   rounded?: RoundedType;
